@@ -1,7 +1,7 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/0.13/config/configuration-file.html
 
-module.exports : function (config) {
+module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular/cli'],
@@ -23,8 +23,8 @@ module.exports : function (config) {
       environment: 'dev'
     },
     singleRun: true,
-    reporters :['dots', 'junit'],
-    junitReporter : {
+    reporters =['dots', 'junit'],
+    junitReporter = {
       outputFile: 'test-results.xml'
     },
     port: 9876,
