@@ -23,8 +23,8 @@ module.exports = function (config) {
       environment: 'dev'
     },
     singleRun: true,
-    reporters =['dots', 'junit'],
-    junitReporter = {
+    reporters: ['dots', 'junit'],
+    junitReporter: {
       outputFile: 'test-results.xml'
     },
     port: 9876,
