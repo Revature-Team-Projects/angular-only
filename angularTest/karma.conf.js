@@ -7,7 +7,7 @@ module.exports = function (config) {
     frameworks: ['jasmine', '@angular/cli'],
     plugins: [
       require('karma-jasmine'),
-      require('karma-chrome-launcher'),
+      require('karma-phantomjs-launcher'),  /* add this line to disable the karma-phantomjs-launcher*/
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular/cli/plugins/karma')
@@ -22,18 +22,15 @@ module.exports = function (config) {
     angularCli: {
       environment: 'dev'
     },
-
-    customLaunchers: {
-      ChromeHeadless: {
-        base: 'Chrome',
-        flags: [
-          '--headless', '--disable-gpu',
-          '--no-sandbox',
-          '--remote-debugging-port=9222']
-      }
+    singleRun = true,
+    reporters =['dots', 'junit'],
+    junitReporter = {
+      outputFile: 'test-results.xml'
     },
-
-    browsers: ['ChromeHeadless'],
-    singleRun: true
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['PhantomJS'], /*remove chrome and replace it with PhantomJS */
   });
 };
