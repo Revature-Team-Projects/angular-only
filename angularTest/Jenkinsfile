@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('npm install') {
             steps {
+                sh 'echo "Installing node_modules"'
                 sh '''
-                cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest" \
+                cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
                 npm install
                 '''
             }
