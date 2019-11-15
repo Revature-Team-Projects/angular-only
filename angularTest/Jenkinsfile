@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
           steps {
                 sh '''
-                cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
+                cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
                 ng build
                 '''
           }
@@ -12,7 +12,7 @@ pipeline {
         stage('Deploy'){
             steps{
                 sh '''
-                cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
+                cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
                  aws s3 cp --recursive ./dist s3://ui-core/angular
                 '''
             }
