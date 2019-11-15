@@ -10,20 +10,12 @@ pipeline {
                 '''
             }
         }
-        stage('Unit Tests') {
+        stage('Build') {
           steps {
                 sh '''
                 cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
-                npm run test:ci
+                ng build
                 '''
-          }
-        }
-        stage('e2e tests') {
-          steps {
-                sh '''
-                cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
-                npm run e2e:ci
-                '''              
           }
         }
         stage('Deploy'){
