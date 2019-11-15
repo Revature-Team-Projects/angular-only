@@ -1,15 +1,6 @@
 pipeline {
     agent any 
     stages {
-        stage('Npm install') {
-            steps {
-                sh 'echo "Installing node_modules"'
-                sh '''
-                cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
-                npm install
-                '''
-            }
-        }
         stage('Build') {
           steps {
                 sh '''
