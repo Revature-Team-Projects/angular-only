@@ -12,20 +12,26 @@ pipeline {
         }
         stage('Unit Tests') {
           steps {
-              sh "cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest"
-              sh "npm run test:ci"
+                sh '''
+                cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
+                npm run test:ci
+                '''
           }
         }
         stage('e2e tests') {
           steps {
-              sh "cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest"
-              sh "npm run e2e:ci"
+                sh '''
+                cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
+                npm run e2e:ci
+                '''              
           }
         }
         stage('Deploy'){
             steps{
-                sh "cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest"
-                sh "aws ui-core cp ./dist ui-core"
+                sh '''
+                cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
+                aws ui-core cp ./dist ui-core
+                '''
             }
         }
     }
