@@ -29,12 +29,17 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ["Chrome", "HeadlessChrome"],
-    customLaunchers: {
-        HeadlessChrome: {
-        base: "ChromeHeadless",
-        flags: ["--no-sandbox"]
-        }
+     browsers: ['HeadlessChrome'],
+    customLaunchers:{
+      HeadlessChrome:{
+        base: 'ChromeHeadless',
+        flags: [
+          '--no-sandbox',
+          '--proxy-bypass-list=*',
+          '--proxy-server=\'http://<my org proxy server>:8080\''
+       ]
+      }
     },
+    
   });
 };
