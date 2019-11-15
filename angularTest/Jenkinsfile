@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Unit Tests') {
           steps {
-              sh "cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest"
-              sh "npm run test"
+              sh "cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest/package.json"
+              sh "npm run test:ci"
           }
         }
         stage('e2e tests') {
