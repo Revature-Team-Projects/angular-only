@@ -22,7 +22,7 @@ pipeline {
             steps{
                 sh '''
                 cd /home/ec2-user/.jenkins/workspace/Angular_Trial_Test_Stage_master/angularTest
-                aws ui-core cp ./dist ui-core
+                 aws s3 cp --recursive ./dist s3://ui-core/angular
                 '''
             }
         }
