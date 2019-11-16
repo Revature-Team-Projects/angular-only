@@ -9,11 +9,12 @@ pipeline {
                 '''
           }
         }
-        stage('Deploy'){
+        stage('Test'){
             steps{
                 sh '''
                 cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
-                 aws s3 cp --recursive ./dist s3://ui-core/angular
+                npm install phantomJS --save-dev
+                npm run test
                 '''
             }
         }

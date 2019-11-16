@@ -4,37 +4,38 @@
 // process.env.CHROME_BIN = require('puppeteer').executablePath()
 
 
-module.exports = function (config) {
-  config.set({
-    basePath: '',
-    frameworks: ['jasmine', '@angular/cli'],
-    plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter'),
-      require('@angular/cli/plugins/karma')
-    ],
-    client: {
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
-    },
-    coverageIstanbulReporter: {
-      reports: ['html', 'lcovonly'],
-      fixWebpackSourcePaths: true
-    },
-    angularCli: {
-      environment: 'dev'
-    },
-    reporters: ['progress', 'kjhtml'],
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ["Chrome", "HeadlessChrome"],
-    customLaunchers: {
-        HeadlessChrome: {
-        base: "ChromeHeadless",
-        flags: ["--no-sandbox"]
-        }
-    },
-  });
+module.exports = function(config) {
+    config.set({
+        basePath: '',
+        frameworks: ['jasmine', '@angular/cli'],
+        plugins: [
+            require('karma-jasmine'),
+            require('karma-junit-reporter'),
+            require('karma-phantomjs-launcher'),
+            require('karma-jasmine-html-reporter'),
+            require('karma-coverage-istanbul-reporter'),
+            require('@angular/cli/plugins/karma')
+        ],
+        client: {
+            clearContext: false // leave Jasmine Spec Runner output visible in browser
+        },
+        coverageIstanbulReporter: {
+            reports: ['html', 'lcovonly'],
+            fixWebpackSourcePaths: true
+        },
+        angularCli: {
+            environment: 'dev'
+        },
+        reporters: ['progress', 'dots', 'junit'],
+        junitReporter: {
+            outputDir: 'karma-results',
+            outputFile: 'karma-results.xml'
+        },
+        port: 9876,
+        colors: true,
+        logLevel: config.LOG_INFO,
+        autoWatch: true,
+        browsers: ['PhantomJS'],
+        singleRun: true,
+    });
 };
