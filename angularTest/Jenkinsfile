@@ -13,7 +13,7 @@ pipeline {
             steps{
                 sh '''
                 cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
-                npm install phantomJS --save-dev
+                npm install phantomjs --save-dev
                 npm run test
                 '''
             }
