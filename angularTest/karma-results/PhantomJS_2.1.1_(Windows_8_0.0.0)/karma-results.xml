@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
-<testsuite name="PhantomJS 2.1.1 (Windows 8 0.0.0)" package="" timestamp="2019-11-17T00:01:44" id="0" hostname="Raidboss" tests="17" errors="0" failures="0" time="1.799">
+<testsuite name="PhantomJS 2.1.1 (Windows 8 0.0.0)" package="" timestamp="2019-11-17T01:03:34" id="0" hostname="Raidboss" tests="17" errors="0" failures="0" time="1.804">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
   </properties>
+  <testcase name="EnvironmentService getApiUrl should return mock api url when passed true" time="0.035" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).EnvironmentService getApiUrl"/>
   <testcase name="Router: App fakeAsync works" time="0.344" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).Router: App"/>
-  <testcase name="Router: App navigate to &quot;&quot; redirects you to /dashboard" time="0.275" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).Router: App"/>
-  <testcase name="Router: App navigate to &quot;feature&quot; redirects to /feature" time="0.258" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).Router: App"/>
-  <testcase name="AppComponent should create the app" time="0.112" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).AppComponent"/>
-  <testcase name="AppComponent should have as title 'app'" time="0.106" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).AppComponent"/>
+  <testcase name="Router: App navigate to &quot;&quot; redirects you to /dashboard" time="0.28" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).Router: App"/>
+  <testcase name="Router: App navigate to &quot;feature&quot; redirects to /feature" time="0.259" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).Router: App"/>
+  <testcase name="AppComponent should create the app" time="0.113" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).AppComponent"/>
+  <testcase name="AppComponent should have as title 'app'" time="0.105" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).AppComponent"/>
   <testcase name="AppComponent should render title in a h1 tag" time="0.103" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).AppComponent"/>
   <testcase name="DashboardComponent should be created" time="0.053" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).DashboardComponent"/>
-  <testcase name="FeatureComponent should be created" time="0.093" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).FeatureComponent"/>
-  <testcase name="FeatureComponent should render title in a p tag" time="0.091" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).FeatureComponent"/>
+  <testcase name="FeatureComponent should be created" time="0.091" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).FeatureComponent"/>
+  <testcase name="FeatureComponent should render title in a p tag" time="0.092" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).FeatureComponent"/>
   <testcase name="FeatureComponent should render products in a table element" time="0.085" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).FeatureComponent"/>
-  <testcase name="FeatureService should be created" time="0.042" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).FeatureService"/>
+  <testcase name="FeatureService should be created" time="0.041" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).FeatureService"/>
   <testcase name="FeatureService getProducts should return all products" time="0.033" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).FeatureService getProducts"/>
-  <testcase name="MockBackenbdService should be created" time="0.051" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).MockBackenbdService"/>
+  <testcase name="MockBackenbdService should be created" time="0.05" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).MockBackenbdService"/>
   <testcase name="MockBackenbdService api/products should return all products" time="0.037" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).MockBackenbdService api/products"/>
-  <testcase name="EnvironmentService should be created" time="0.049" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).EnvironmentService"/>
+  <testcase name="EnvironmentService should be created" time="0.048" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).EnvironmentService"/>
   <testcase name="EnvironmentService getApiUrl should return api url" time="0.035" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).EnvironmentService getApiUrl"/>
-  <testcase name="EnvironmentService getApiUrl should return mock api url when passed true" time="0.032" classname="PhantomJS_2_1_1_(Windows_8_0_0_0).EnvironmentService getApiUrl"/>
   <system-out>
     <![CDATA[
 ]]>
