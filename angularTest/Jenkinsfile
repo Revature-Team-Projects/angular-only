@@ -1,14 +1,14 @@
 pipeline {
     agent any 
     stages {
-        stage('Npm install'){
-            steps{
-                sh '''
-                cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
-                npm i
-                '''
-            }
-        }
+        // stage('Npm install'){
+        //     steps{
+        //         sh '''
+        //         cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
+        //         npm i
+        //         '''
+        //     }
+        // }
         // stage('Build') {
         //   steps {
         //         sh '''
