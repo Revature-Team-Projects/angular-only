@@ -5,7 +5,7 @@ pipeline {
             steps{
                 sh '''
                 cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
-                rm -rf /nod_modules/
+                rm -rf /node_modules/
                 npm i
                 '''
             }
