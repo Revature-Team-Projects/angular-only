@@ -28,6 +28,8 @@ module.exports = function (config) {
         reporters: ['progress', 'kjhtml'],
         colors: true,
         browserDisconnectTimeout : 20000,
+        browserNoActivityTimeout: 20000,
+
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['PhantomJS'],
