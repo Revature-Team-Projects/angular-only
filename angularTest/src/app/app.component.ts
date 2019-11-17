@@ -1,5 +1,3 @@
-import { MockBackendService } from './mock-backend/mock-backend.service';
-
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-
-  // Bootstrap mock backend service
-  constructor(private mockBackend: MockBackendService) { }
+  title = 'app works on heroku!';
 }

@@ -1,6 +1,6 @@
-import { browser, by, element } from 'protractor';
+import { browser, element, by } from 'protractor';
 
-export class AngularRouteTestingPage {
+export class HerokuDemoPage {
   navigateTo() {
     return browser.get('/');
   }

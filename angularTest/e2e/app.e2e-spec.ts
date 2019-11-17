@@ -1,14 +1,14 @@
-import { AngularRouteTestingPage } from './app.po';
+import { HerokuDemoPage } from './app.po';
 
-describe('angular-route-testing App', () => {
-  let page: AngularRouteTestingPage;
+describe('heroku-demo App', () => {
+  let page: HerokuDemoPage;
 
   beforeEach(() => {
-    page = new AngularRouteTestingPage();
+    page = new HerokuDemoPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('app works on heroku!');
   });
 });
