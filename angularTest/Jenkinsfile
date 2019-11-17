@@ -28,5 +28,13 @@ pipeline {
                 '''
             }
         }
+        // stage('Deploy'){
+        //     steps{
+        //         sh '''
+        //         cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
+        //          aws s3 cp --recursive ./dist s3://ui-core/angular
+        //         '''
+        //     }
+        // }
     }
 }
