@@ -21,8 +21,6 @@ pipeline {
         stage('Test'){
             steps{
                 sh '''
-                export OPENSSL_CONF=$WORKSPACE/openssl.cnf
-                sudo yum -y install fontconfig
                 cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
                 ng test
                 '''
