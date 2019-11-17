@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome 78.0.3904 (Windows 10.0.0)" package="" timestamp="2019-11-17T23:15:26" id="0" hostname="LAPTOP-7KCNNSKB" tests="3" errors="0" failures="0" time="0.266">
+<testsuite name="Chrome 78.0.3904 (Windows 10.0.0)" package="" timestamp="2019-11-17T23:40:37" id="0" hostname="LAPTOP-7KCNNSKB" tests="3" errors="0" failures="0" time="1.249">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"/>
   </properties>
-  <testcase name="AppComponent should create the app" time="0.119" classname="Chrome_78_0_3904_(Windows_10_0_0).AppComponent"/>
-  <testcase name="AppComponent should have as title 'app works on heroku!'" time="0.048" classname="Chrome_78_0_3904_(Windows_10_0_0).AppComponent"/>
-  <testcase name="AppComponent should render title in a h1 tag" time="0.099" classname="Chrome_78_0_3904_(Windows_10_0_0).AppComponent"/>
+  <testcase name="AppComponent should create the app" time="0.14" classname="Chrome_78_0_3904_(Windows_10_0_0).AppComponent"/>
+  <testcase name="AppComponent should have as title 'app works on heroku!'" time="0.061" classname="Chrome_78_0_3904_(Windows_10_0_0).AppComponent"/>
+  <testcase name="AppComponent should render title in a h1 tag" time="1.048" classname="Chrome_78_0_3904_(Windows_10_0_0).AppComponent"/>
   <system-out>
-    <![CDATA[
+    <![CDATA[Chrome 78.0.3904 (Windows 10.0.0) ERROR
+  Disconnectedundefined
+
 ]]>
   </system-out>
   <system-err/>
