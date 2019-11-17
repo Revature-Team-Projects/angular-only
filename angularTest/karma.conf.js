@@ -3,14 +3,13 @@
 
 // process.env.CHROME_BIN = require('puppeteer').executablePath()
 
-
-module.exports = function(config) {
+module.exports = function (config) {
     config.set({
         basePath: '',
         frameworks: ['jasmine', '@angular/cli'],
         plugins: [
             require('karma-jasmine'),
-            require('karma-junit-reporter'),
+            require('karma-chrome-launcher'),
             require('karma-phantomjs-launcher'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter'),
@@ -26,16 +25,11 @@ module.exports = function(config) {
         angularCli: {
             environment: 'dev'
         },
-        reporters: ['progress', 'dots', 'junit'],
-        junitReporter: {
-            outputDir: 'karma-results',
-            outputFile: 'karma-results.xml'
-        },
-        port: 9876,
+        reporters: ['progress', 'kjhtml'],
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['PhantomJS'],
-        singleRun: true,
+        singleRun: true
     });
 };
