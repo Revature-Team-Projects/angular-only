@@ -40,7 +40,7 @@ node {
                 ng test --progress=false --watch false
             '''
         }
-        junit '**/test-results.xml'
+        junit 'Chrome_78.0.3904_(Windows_10.0.0)/test-results.xml'
     }
 
     stage('Lint') {
