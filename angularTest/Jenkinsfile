@@ -10,14 +10,14 @@ pipeline {
                 '''
             }
         }
-        // stage('Build') { ?
-        //   steps {
-        //         sh '''
-        //         cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
-        //         ng build
-        //         '''
-        //   }
-        // }
+        stage('Build') { ?
+          steps {
+                sh '''
+                cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
+                ng build
+                '''
+          }
+        }
         stage('Test'){
             steps{
                 sh '''
@@ -30,7 +30,7 @@ pipeline {
             steps{
                 sh '''
                 cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
-                 aws s3 cp --recursive ./dist s3://ui-core/angular
+                 aws2 s3 cp --recursive ./dist s3://ui-core/angular
                 '''
             }
         }
