@@ -27,7 +27,7 @@ node {
     stage('NPM Install') {
         withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
             sh '''
-                cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
+                cd /home/ec2-user/.jenkins/workspace/Jenkins/angularTest
                 npm install
             '''
         }
@@ -36,7 +36,7 @@ node {
     stage('Test') {
         withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
           sh '''
-                cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
+                cd /home/ec2-user/.jenkins/workspace/Jenkins/angularTest
                 ng test --progress=false --watch false
             '''
         }
