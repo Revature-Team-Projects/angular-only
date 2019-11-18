@@ -10,7 +10,7 @@ pipeline {
                 '''
             }
         }
-        stage('Build') { ?
+        stage('Build') { 
           steps {
                 sh '''
                 cd /home/ec2-user/.jenkins/workspace/ang_clone/angularTest
