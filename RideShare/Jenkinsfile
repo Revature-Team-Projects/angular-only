@@ -1,6 +1,14 @@
 pipeline {
     agent any 
     stages {
+        stage('Checkout'){
+            steps{
+                sh '''
+                cd /home/ec2-user/.jenkins/workspace/ang_clone/
+                deleteDir()
+                '''
+            }
+        }
         stage('Npm install'){
             steps{
                 sh '''
