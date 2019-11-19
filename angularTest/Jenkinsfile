@@ -34,7 +34,7 @@ node {
     }
 
     stage('Test') {
-        withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
+        withEnv(["CHROME_BIN=/usr/bin/chromium"]) {
           sh '''
                 cd /home/ec2-user/.jenkins/workspace/Jenkins/angularTest
                 npm run test-headless
