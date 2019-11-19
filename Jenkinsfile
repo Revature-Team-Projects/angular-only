@@ -1,37 +1,45 @@
 pipeline {
     agent any 
     stages {
+        stage('Checkout'){
+            steps{
+                sh '''
+                cd /home/ec2-user/.jenkins/workspace/Headless_testing/
+                deleteDir()
+                '''
+            }
+        }
         stage('Npm install'){
             steps{
                 sh '''
-                cd /home/ec2-user/.jenkins/workspace/ang_clone/RideShare
+                cd /home/ec2-user/.jenkins/workspace/Headless_testing/RideShare
                 npm i
                 '''
             }
         }
-        stage('Build') { 
-          steps {
-                sh '''
-                cd /home/ec2-user/.jenkins/workspace/ang_clone/RideShare
-                ng build
-                '''
-          }
-        }
         stage('Test'){
             steps{
                 sh '''
-                cd /home/ec2-user/.jenkins/workspace/ang_clone/RideShare
+                cd /home/ec2-user/.jenkins/workspace/Headless_testing/RideShare
                 npm run test-headless
                 '''
             }
         }
-        stage('Deploy'){
-            steps{
-                sh '''
-                cd /home/ec2-user/.jenkins/workspace/ang_clone/RideShare
-                 aws2 s3 cp --recursive ./dist s3://ang_clone/angular
-                '''
-            }
-        }
+        // stage('Build') { 
+        //   steps {
+        //         sh '''
+        //         cd /home/ec2-user/.jenkins/workspace/Headless_testing/RideShare
+        //         ng build
+        //         '''
+        //   }
+        // }
+        // stage('Deploy'){
+        //     steps{
+        //         sh '''
+        //         cd /home/ec2-user/.jenkins/workspace/Headless_testing/RideShare
+        //          aws2 s3 cp --recursive ./dist s3://Headless_testing/angular
+        //         '''
+        //     }
+        // }
     }
 }
