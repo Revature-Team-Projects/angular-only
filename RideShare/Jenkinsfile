@@ -1,14 +1,14 @@
 pipeline {
     agent any 
     stages {
-        stage('Checkout'){
-            steps{
-                sh '''
-                cd /home/ec2-user/.jenkins/workspace/Headless_testing/
-                deleteDir
-                '''
-            }
-        }
+        // stage('Checkout'){
+        //     steps{
+        //         sh '''
+        //         cd /home/ec2-user/.jenkins/workspace/Headless_testing/
+        //         deleteDir
+        //         '''
+        //     }
+        // }
         stage('Npm install'){
             steps{
                 sh '''
