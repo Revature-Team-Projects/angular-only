@@ -37,7 +37,7 @@ node {
         withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
           sh '''
                 cd /home/ec2-user/.jenkins/workspace/Jenkins/angularTest
-                ng test --progress=false --watch false
+                npm run test-headless
             '''
         }
         junit '**/test-results.xml'
